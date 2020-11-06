@@ -5,20 +5,21 @@ In this project, I created a pipeline that trains a model on the Bank Marketing 
 ## Architectural Diagram
 ![Steps](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/step%20diagram.png)
 For this project, there are 8 steps:
-1. Authentication
-2. Automated ML Experiment
-3. Deploy the best model
-4. Enable logging
-5. Swagger Documentation
-6. Consume model endpoints
-7. Create and publish a pipeline
-8. Documentation
+1. [Authentication](#auth)
+2. [Automated ML Experiment](#automl)
+3. [Deploy the best model](#best_model)
+4. [Enable logging](#logging)
+5. [Swagger Documentation](#swagger)
+6. [Consume model endpoints](#consume)
+7. [Create and publish a pipeline](#publish)
+8. [Documentation](#docs)
 
 ## Key Steps
-### Authentication
+
+### Authentication <a name="auth" />
 Since I used the Udacity provided lab, this step was taken care of for me by the lab. But in essence, it ensures that the Azure Machine Learning Extention (az) command line interface is allowed to communicate with the Azure ML Studio
 
-### Automate ML Experiment
+### Automate ML Experiment <a name="automl" />
 For this step, first I had to make sure the Bank Marketing dataset was uploaded to the Azure ML Datastore
 
 ![Datasets](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/Registered%20Datasets.PNG)
@@ -31,24 +32,24 @@ Then, I identified the best model from this AutoML experiment, which turned out 
 
 ![Best Model](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/Best%20Experiment.PNG)
 
-### Deploy the Best Model
+### Deploy the Best Model <a name="best_model" />
 Now that the best model was identified, I deployed it as an endpoint.
 
 ![Deployed Endpoint](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/Endpoint%20Details.PNG)
 
-### Enable Logging
+### Enable Logging <a name="logging" />
 To enable logging, I turned on the 'Application Insights' for the deployed endpoint and ran a script to view the log output
 
 ![Application Insights On](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/Application%20Insights%20enabled.PNG)
 
 ![Log output](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/logs.PNG)
 
-### Swagger Documentation
+### Swagger Documentation <a name="swagger" />
 Next, I deployed a Swagger UI docker container and a simple server to be able to display the swagger documentation for this endpoint
 
 ![Swagger UI](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/swagger%20ui.PNG)
 
-### Consume Model Endpoint
+### Consume Model Endpoint <a name="consume" />
 Next, I ran a script to ensure that the endpoint could actually be consumed by an application and ran a benchmark to ensure it runs efficiently.
 
 ![Endpoint Output](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/endpoint%20output.PNG)
@@ -56,7 +57,7 @@ Next, I ran a script to ensure that the endpoint could actually be consumed by a
 ![Benchmark Output1](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/benchmark%20output%201.PNG)
 ![Benchmark Output2](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/benchmark%20output%202.PNG)
 
-### Create and publish a pipeline
+### Create and publish a pipeline <a name="publish" />
 Next I used a [Jupyter Notebook](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/aml-pipelines-with-automated-machine-learning-step.ipynb) to create and publish a pipeline. 
 
 ![Pipelines](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/Pipelines.PNG)
@@ -69,10 +70,6 @@ Next I used a [Jupyter Notebook](https://github.com/DrewAumick/Udacity_AZMLND_C2
 
 ![RunDetails Run](https://github.com/DrewAumick/Udacity_AZMLND_C2/blob/master/starter_files/Udacity%20class%20screenshots/RunDetails.PNG)
 
-### Documentation
-Finally, I created documentation in the form of this README file and the screencast video below.
-
-## Screen Recording
-Click the link below to see a screencast I did demonstrating the completed artifacts from my project.
-https://youtu.be/X7P__8LAbBo
+### Documentation <a name="docs">
+Finally, I created documentation in the form of this README file and a screencast video. Click [here](https://youtu.be/X7P__8LAbBo) to see a screencast I did demonstrating the completed artifacts from my project.
 
